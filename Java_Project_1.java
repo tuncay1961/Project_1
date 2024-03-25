@@ -1,5 +1,31 @@
 import java.util.*;
-public class Dnm2{
+public class Special_Code{
+   int number=1;
+    Special_Code(){
+
+    }
+    Special_Code(int last_number){
+        number=last_number;
+
+    }
+    int findToNumberOfPrime(int number){
+        int count=1;
+        for(int i=3;i<=number;i++){
+            boolean t=true;
+            for(int j=i-1;j>1;j--){
+                if(i%j==0){t=false;
+
+                }
+                
+                
+            };
+            if(t==true){count++;}
+            
+
+        };
+        return count;
+
+    }
    public static void main(String[] args){
         Scanner input=new Scanner(System.in);
         System.out.println("1) Please enter your birthday between 1 and 7(example Mon=1, Tue=2..):");
@@ -23,6 +49,19 @@ public class Dnm2{
       int number_OfName=name.charAt(0);
         System.out.println(name+"-->"+number_OfName);
 //THİS İS FOR İNİTİAL LETTER QUESTİON
+      //Question 3 below -------------------------
+int u=27;
+System.out.println("3) How many prime numbers can you count until "+u+"?");
+
+Special_Code prime=new Special_Code(3);
+int numberOfPrime_Number=prime.findToNumberOfPrime(u);
+int userPrime_answer=input.nextInt();
+while(userPrime_answer!=numberOfPrime_Number){
+    System.out.println("It is not correct!");
+    userPrime_answer=input.nextInt();
+
+}
+ // --------------Question 3 ^^^^------------------------- 
         
         input.close();
 
