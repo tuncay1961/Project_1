@@ -20,6 +20,8 @@ public class Dnm2{
             System.out.println("Please enter an appropriate initial letter");
             name=input.nextLine();
         };
+      int number_OfName=name.charAt(0);
+        System.out.println(name+"-->"+number_OfName);
 //THİS İS FOR İNİTİAL LETTER QUESTİON
         
         input.close();
