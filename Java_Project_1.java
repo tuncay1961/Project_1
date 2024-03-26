@@ -28,6 +28,7 @@ public class Special_Code{
     }
    public static void main(String[] args){
         Scanner input=new Scanner(System.in);
+    //----------------QUESTİON 1 BELOW-----------------------------------
         System.out.println("1) Please enter your birthday between 1 and 7(example Mon=1, Tue=2..):");
         String string_day=input.nextLine();
        
@@ -38,7 +39,8 @@ public class Special_Code{
         };
         int day=Integer.valueOf(string_day);
         
-        //up is for question one--------------------------------------------------------------
+    //-----------------QUESTİON 1 UP---------------------------------------------------------------
+//---------------------İNİTİAL LETTER QUESTİON BELOW------------------------
       System.out.println("Enter initial letter of your name, (capital english letters only)");
         String name=input.nextLine();
         //
@@ -46,11 +48,11 @@ public class Special_Code{
             System.out.println("Please enter an appropriate initial letter");
             name=input.nextLine();
         };
-      int number_OfName=name.charAt(0);
-        System.out.println(name+"-->"+number_OfName);
-//THİS İS FOR İNİTİAL LETTER QUESTİON
-       //Question 3 below -------------------------
-int u=27;// u 2. sorunu cevabı
+      int value_OfName=name.charAt(0);
+        System.out.println(name+"-->"+value_OfName);
+//------------İNİTİAL LETTER QUESTİON UP------------------------------------------
+//-------------------QUESTİON 3 BELOW ----------------------------------------------
+int u=27;// u 2. sorunu cevabı u'yu değiştirsen iyi olur.
 System.out.println("3) How many prime numbers can you count until "+u+"?");
 
 Special_Code prime=new Special_Code(3);
@@ -64,7 +66,7 @@ String str_userPrime_answer=input.nextLine();
     
 
 };
- // --------------Question 3 ^^^^------------------------- 
+ // --------------Question 3 ^^^^UP------------------------- --------
 
 //--------------QUESTİON 5 BELOW--------------------------------------------------------------
 int answerOf_Q4=30;
@@ -100,6 +102,7 @@ System.out.println("Congratulations! You found the code! The code is "+real_answ
     public static int control(String string_day){
         //digit mi değil mi onun true falseu
         boolean result1=true;
+        // Checks number is it digit or not
         for(int i=0;i<(string_day.length());i++){
             
             char char0fDay = string_day.charAt(i);
@@ -110,13 +113,11 @@ System.out.println("Congratulations! You found the code! The code is "+real_answ
 
 
         };
-        //aralık kontrolü true falseu
+        //Value of day whether is in range or not.
         boolean result2=true;
-        //eğer false ise direkt return false yapıyor çünkü bu bir kelime
         if(result1!=false){
         int day_as_number=Integer.valueOf(string_day);
         
-        //aralıkta mı değil mi onu kontro eder
         if(day_as_number<=7 && day_as_number>=1){
             result2=true;
         }
@@ -131,7 +132,9 @@ System.out.println("Congratulations! You found the code! The code is "+real_answ
 
         
 
-    };public static int checkingLetter(String name){
+    };
+    //Checking is input uppercase character or not.
+    public static int checkingLetter(String name){
         boolean result1=true;
         boolean result2=true;
         boolean result3=true;
@@ -241,7 +244,3 @@ System.out.println("Congratulations! You found the code! The code is "+real_answ
 
     
 }
-
-
-
-
