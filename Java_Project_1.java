@@ -65,6 +65,33 @@ String str_userPrime_answer=input.nextLine();
 
 };
  // --------------Question 3 ^^^^------------------------- 
+
+//--------------QUESTİON 5 BELOW--------------------------------------------------------------
+int answerOf_Q4=30;
+
+System.out.println("Enter your age(between 1-100):");
+String str_age=input.nextLine();
+while(checkingAge(str_age)==false){
+    System.out.println("It is not correct!");
+    str_age=input.nextLine();
+};
+
+int age=Integer.parseInt(str_age);
+System.out.println("5) What is the result of "+answerOf_Q4+ "* "+age+"?");
+int real_answer_Q5=age*answerOf_Q4;
+String str_user_answer=input.nextLine();
+while(checkingResultOf_Q5(str_user_answer,real_answer_Q5 )==false){
+    System.out.println("It is not correct!");
+    str_user_answer=input.nextLine();
+};
+
+System.out.println("Congratulations! You found the code! The code is "+real_answer_Q5);
+
+
+
+
+
+// ---------------------QUESTİON 5 UP------------------------------------------------
         
         input.close();
 
@@ -164,6 +191,28 @@ String str_userPrime_answer=input.nextLine();
         
         return result;
         
+    }
+   public static boolean checkingResultOf_Q5(String user_answer,int real_answer){
+        boolean result1=true;
+        boolean result2=true;
+        boolean result=true;
+        for(int i=0;i<user_answer.length();i++){
+            char charOfAnswer=user_answer.charAt(i);
+            boolean check=Character.isDigit(charOfAnswer);
+            if(check==false){result1=false;break;}
+            else{result1=true;};
+        }
+        if(result1==false){result2=false;}
+        else if(result1=true){
+            if(Integer.parseInt(user_answer)==real_answer){
+                result2=true;
+
+            }
+            else{result2=false;};
+
+        };
+        result=result1&&result2;
+        return result;
     }
 
     
