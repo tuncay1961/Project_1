@@ -1,7 +1,7 @@
 import java.util.*;
 public class Special_Code{
    int number=1;
-   int [] fibonacciList;
+   
     Special_Code(){
 
     }
