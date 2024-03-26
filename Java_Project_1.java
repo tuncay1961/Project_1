@@ -49,18 +49,21 @@ public class Special_Code{
       int number_OfName=name.charAt(0);
         System.out.println(name+"-->"+number_OfName);
 //THİS İS FOR İNİTİAL LETTER QUESTİON
-      //Question 3 below -------------------------
-int u=27;
+       //Question 3 below -------------------------
+int u=27;// u 2. sorunu cevabı
 System.out.println("3) How many prime numbers can you count until "+u+"?");
 
 Special_Code prime=new Special_Code(3);
 int numberOfPrime_Number=prime.findToNumberOfPrime(u);
-int userPrime_answer=input.nextInt();
-while(userPrime_answer!=numberOfPrime_Number){
-    System.out.println("It is not correct!");
-    userPrime_answer=input.nextInt();
+String str_userPrime_answer=input.nextLine();
 
-}
+    while(checkingisDigit_Prime(str_userPrime_answer,numberOfPrime_Number)==false){
+        System.out.println("It is not correct!");
+        str_userPrime_answer=input.nextLine();
+       
+    
+
+};
  // --------------Question 3 ^^^^------------------------- 
         
         input.close();
@@ -131,6 +134,36 @@ while(userPrime_answer!=numberOfPrime_Number){
         
         
 
+    }
+   public static boolean checkingisDigit_Prime(String user_answer,int answer){
+        boolean result1=true;
+        boolean result2=true;
+        boolean result=true;
+        for(int i=0;i<(user_answer.length());i++){
+            
+            char char0fPrime = user_answer.charAt(i);
+            boolean check=Character.isDigit(char0fPrime);
+            
+            if(check==false){result1=false;break;}
+            else{result1=true;};
+            
+            
+
+
+        };
+        if(result1==false){result2=false;}
+        else if(result1!=false){
+            if(Integer.parseInt(user_answer)==answer){
+                result2=true;
+
+            }
+            else{result2=false;}
+
+        };
+        result=result1&&result2;
+        
+        return result;
+        
     }
 
     
