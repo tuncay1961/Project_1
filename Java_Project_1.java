@@ -75,15 +75,15 @@ public class Special_Code{
             System.out.println("Please enter an appropriate initial letter");
             name=input.nextLine();
         };
-      int value_OfName=name.charAt(0);
+      int value_OfName=name.charAt(0);//BURADA İSMİN İLK HARFİNİN DEĞERİ HAZIR MODU ALINMAK İÇİN
         System.out.println(name+"-->"+value_OfName);
 //------------İNİTİAL LETTER QUESTİON UP------------------------------------------
 //-------------------QUESTİON 3 BELOW ----------------------------------------------
-int u=69%4;// u 2. sorunu cevabı u'yu değiştirsen iyi olur.
+int u=69%4;// U 2.SORUNUN CEVABI U'NUN ADINI DEĞİŞTİRSEN İYİ OLUR.
 System.out.println("3) How many prime numbers can you count until "+u+"?");
 
 Special_Code prime=new Special_Code(3);
-int numberOfPrime_Number=prime.findToNumberOfPrime(u);
+int numberOfPrime_Number=prime.findToNumberOfPrime(u);//BURADAKİ DEĞERİ ALABİLİRSİN 4.SORU İÇİN.
 String str_userPrime_answer=input.nextLine();
 
     while(checkingisDigit_Prime(str_userPrime_answer,numberOfPrime_Number)==false){
@@ -93,10 +93,11 @@ String str_userPrime_answer=input.nextLine();
     
 
 };
+      
  // --------------Question 3 ^^^^UP------------------------- --------
 
 //--------------QUESTİON 5 BELOW--------------------------------------------------------------
-int answerOf_Q4=30;
+int answerOf_Q4=30;//BURADAKİ DE SENİN BULACAĞIN CEVAP 4.SORUDAN ONU BU VARİABLE'A YAZABİLİRSİN
 
 System.out.println("Enter your age(between 1-100):");
 String str_age=input.nextLine();
