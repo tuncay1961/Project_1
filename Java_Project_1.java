@@ -192,6 +192,30 @@ System.out.println("Congratulations! You found the code! The code is "+real_answ
         return result;
         
     }
+   public static boolean checkingAge(String str_age){
+        boolean result1=true;
+        boolean result2=true;
+        boolean result=true;
+        for(int i=0;i<str_age.length();i++){
+            char charOfAge=str_age.charAt(i);
+            boolean check=Character.isDigit(charOfAge);
+            if(check==false){result1=false;break;}
+            else{result1=true;};
+
+        };
+        int age=Integer.parseInt(str_age);
+        if(result1==false){result2=false;}
+        else if(result!=false){
+            if(age>=1 && age<=100){
+                result2=true;
+            }
+            else{result2=false;};
+        }
+        result=result1&result2;
+        return result;
+        
+        
+    }
    public static boolean checkingResultOf_Q5(String user_answer,int real_answer){
         boolean result1=true;
         boolean result2=true;
