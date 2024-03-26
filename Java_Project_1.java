@@ -1,6 +1,7 @@
 import java.util.*;
 public class Special_Code{
    int number=1;
+   int [] fibonacciList;
     Special_Code(){
 
     }
@@ -10,6 +11,8 @@ public class Special_Code{
     }
     int findToNumberOfPrime(int number){
         int count=1;
+        int [] prime=new int[number];
+        if(number!=1){
         for(int i=3;i<=number;i++){
             boolean t=true;
             for(int j=i-1;j>1;j--){
@@ -19,12 +22,36 @@ public class Special_Code{
                 
                 
             };
-            if(t==true){count++;}
+            if(t==true){count++;prime[count--]=i;}
+            
             
 
-        };
+        };}
+        else{count=0;};
         return count;
 
+    }
+    //Finding prime numebr at whichever index.
+    int findPrime(int number,int indexOfPrimeList){
+        int index=1;
+        int [] prime=new int[number];
+        prime[0]=2;
+        if(number!=1){
+            for(int i=3;i<=number;i++){
+                boolean t=true;
+                for(int j=i-1;j>1;j--){
+                    if(i%j==0){t=false;
+    
+                    }//liste yapmak
+                    
+                    
+                };
+                if(t==true){prime[index]=i;index++;}
+                
+                
+    
+            };};
+            return prime[indexOfPrimeList];
     }
    public static void main(String[] args){
         Scanner input=new Scanner(System.in);
@@ -52,7 +79,7 @@ public class Special_Code{
         System.out.println(name+"-->"+value_OfName);
 //------------İNİTİAL LETTER QUESTİON UP------------------------------------------
 //-------------------QUESTİON 3 BELOW ----------------------------------------------
-int u=27;// u 2. sorunu cevabı u'yu değiştirsen iyi olur.
+int u=69%4;// u 2. sorunu cevabı u'yu değiştirsen iyi olur.
 System.out.println("3) How many prime numbers can you count until "+u+"?");
 
 Special_Code prime=new Special_Code(3);
@@ -96,6 +123,7 @@ System.out.println("Congratulations! You found the code! The code is "+real_answ
 // ---------------------QUESTİON 5 UP------------------------------------------------
         
         input.close();
+        
 
 
     };
@@ -133,6 +161,7 @@ System.out.println("Congratulations! You found the code! The code is "+real_answ
         
 
     };
+
     //Checking is input uppercase character or not.
     public static int checkingLetter(String name){
         boolean result1=true;
